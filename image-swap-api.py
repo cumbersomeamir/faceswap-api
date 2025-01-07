@@ -96,6 +96,7 @@ def face_swap():
             "--execution-providers", "cpu",
             "--execution-thread-count", "4",
             "--execution-queue-count", "1",
+            "--face-swapper-pixel-boost", "256x256",
             "--output-image-quality", "100",
             "--output-image-resolution", "1920x1080",
             "--log-level", "info"
