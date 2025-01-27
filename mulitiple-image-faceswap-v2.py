@@ -56,7 +56,7 @@ def upload_to_s3(file_path, bucket_name):
     except Exception as e:
         raise Exception(f"Failed to upload to S3: {str(e)}")
 
-@app.route('/faceswap', methods=['POST'])
+@app.route('/multiple-image-faceswap', methods=['POST'])
 def face_swap():
     try:
         data = request.json
