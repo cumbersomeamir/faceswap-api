@@ -69,7 +69,7 @@ def select_target_images(gender, num_images):
     selected_images = random.sample(images, num_images)  # Randomly select non-repeating images
     return [os.path.join(gender_folder, img) for img in selected_images]
 
-@app.route('/faceswap', methods=['POST'])
+@app.route('/five-images-faceswap', methods=['POST'])
 def face_swap():
     try:
         data = request.json
@@ -149,4 +149,4 @@ def face_swap():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=7860)
+    app.run(debug=True, host='0.0.0.0', port=8013)
