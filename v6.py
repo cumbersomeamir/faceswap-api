@@ -1,4 +1,3 @@
-
 from flask import Flask, request, jsonify
 import os
 import random
@@ -18,7 +17,7 @@ target_path_template = os.path.join(base_path, "target_{}.jpg")
 output_path_template = os.path.join(base_path, "output_{}.jpg")
 script_path = os.path.join(base_path, "facefusion.py")
 
-# AWS configuration from envs
+# AWS configuration from environment variables
 aws_access_key = os.getenv("AWS_ACCESS_KEY")
 aws_secret_key = os.getenv("AWS_SECRET_KEY")
 s3_bucket_name = os.getenv("S3_BUCKET_NAME")
